@@ -1,0 +1,87 @@
+<!DOCTYPE html><html><head><meta charset='UTF-8'><title>Manual Copy Text Tool</title>
+<style>
+body { font-family: Arial; padding: 20px; background-color: #121212; color: #eee; }
+button { margin-top: 10px; padding: 10px; font-size: 16px; background-color: #333; color: #fff; border: 1px solid #444; cursor: pointer; }
+button:hover { background-color: #444; }
+.category { margin-bottom: 25px; }
+label { font-weight: bold; display: block; margin-bottom: 5px; }
+.phrase { margin-left: 20px; display: block; }
+.hidden { display: none; }
+textarea#output { width: 100%; height: 150px; margin-top: 20px; padding: 10px; font-size: 14px; background: #222; color: #eee; border: 1px solid #555; }
+</style></head><body>
+<h1>Auto Text Insertion Tool (Manual Copy Mode)</h1><form id='phraseForm' onsubmit=';'>
+<div class='category' id='group1'><label>1. Left Ventricle</label>
+<label class='phrase'><input type='radio' name='cat1' value='Normal left ventricular size and ejection fraction (EF XX%).' onclick=';'> Normal left ventricular size and ejection fraction (EF XX%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Normal left ventricular size with reduced ejection fraction (EF XX%).' onclick=';'> Normal left ventricular size with reduced ejection fraction (EF XX%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Mildly dilated left ventricle with normal ejection fraction (EF XX%).' onclick=';'> Mildly dilated left ventricle with normal ejection fraction (EF XX%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Mildly dilated left ventricle with low-normal ejection fraction (EF 50%).' onclick=';'> Mildly dilated left ventricle with low-normal ejection fraction (EF 50%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Mildly dilated left ventricle with mildly reduced ejection fraction (EF 45%).' onclick=';'> Mildly dilated left ventricle with mildly reduced ejection fraction (EF 45%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Mildly dilated left ventricle with moderately reduced ejection fraction (EF 35-40%).' onclick=';'> Mildly dilated left ventricle with moderately reduced ejection fraction (EF 35-40%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Mildly dilated left ventricle with severely reduced ejection fraction (EF 30-35%).' onclick=';'> Mildly dilated left ventricle with severely reduced ejection fraction (EF 30-35%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Moderately dilated left ventricle with normal ejection fraction (EF XX%).' onclick=';'> Moderately dilated left ventricle with normal ejection fraction (EF XX%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Moderately dilated left ventricle with low-normal ejection fraction (EF 50%).' onclick=';'> Moderately dilated left ventricle with low-normal ejection fraction (EF 50%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Moderately dilated left ventricle with mildly reduced ejection fraction (EF 45%).' onclick=';'> Moderately dilated left ventricle with mildly reduced ejection fraction (EF 45%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Moderately dilated left ventricle with moderately reduced ejection fraction (EF 35-40%).' onclick=';'> Moderately dilated left ventricle with moderately reduced ejection fraction (EF 35-40%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Moderately dilated left ventricle with severely reduced ejection fraction (EF 30-35%).' onclick=';'> Moderately dilated left ventricle with severely reduced ejection fraction (EF 30-35%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Severely dilated left ventricle with normal ejection fraction (EF XX%).' onclick=';'> Severely dilated left ventricle with normal ejection fraction (EF XX%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Severely dilated left ventricle with low-normal ejection fraction (EF 50%).' onclick=';'> Severely dilated left ventricle with low-normal ejection fraction (EF 50%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Severely dilated left ventricle with mildly reduced ejection fraction (EF 45%).' onclick=';'> Severely dilated left ventricle with mildly reduced ejection fraction (EF 45%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Severely dilated left ventricle with moderately reduced ejection fraction (EF 35-40%).' onclick=';'> Severely dilated left ventricle with moderately reduced ejection fraction (EF 35-40%).</label>
+<label class='phrase'><input type='radio' name='cat1' value='Severely dilated left ventricle with severely reduced ejection fraction (EF 30-35%).' onclick=';'> Severely dilated left ventricle with severely reduced ejection fraction (EF 30-35%).</label>
+<div id='extra1' style='margin-left:20px; margin-top:10px;'><i>Optional additions:</i>
+<label class='phrase'><input type='checkbox' name='extra1' value='Increased wall thickness.'> Increased wall thickness.</label>
+<label class='phrase'><input type='checkbox' name='extra1' value='Reduced longitudinal function (GLS XX% and TDI).'> Reduced longitudinal function (GLS XX% and TDI).</label>
+</div>
+</div>
+<div class='category' id='group2'><label>2. Right Ventricle</label>
+<label class='phrase'><input type='radio' name='cat2' value='Normal right ventricular size and contraction.' onclick=';'> Normal right ventricular size and contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Mildly dilated right ventricle with satisfactory contraction.' onclick=';'> Mildly dilated right ventricle with satisfactory contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Mildly dilated right ventricle with mildly reduced contraction.' onclick=';'> Mildly dilated right ventricle with mildly reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Mildly dilated right ventricle with moderately reduced contraction.' onclick=';'> Mildly dilated right ventricle with moderately reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Mildly dilated right ventricle with severely reduced contraction.' onclick=';'> Mildly dilated right ventricle with severely reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Moderetely dilated right ventricle with satisfactory contraction.' onclick=';'> Moderetely dilated right ventricle with satisfactory contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Moderetely dilated right ventricle with mildly reduced contraction.' onclick=';'> Moderetely dilated right ventricle with mildly reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Moderetely dilated right ventricle with moderately reduced contraction.' onclick=';'> Moderetely dilated right ventricle with moderately reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Moderetely dilated right ventricle with severely reduced contraction.' onclick=';'> Moderetely dilated right ventricle with severely reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Severely dilated right ventricle with satisfactory contraction.' onclick=';'> Severely dilated right ventricle with satisfactory contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Severely dilated right ventricle with mildly reduced contraction.' onclick=';'> Severely dilated right ventricle with mildly reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Severely dilated right ventricle with moderately reduced contraction.' onclick=';'> Severely dilated right ventricle with moderately reduced contraction.</label>
+<label class='phrase'><input type='radio' name='cat2' value='Severely dilated right ventricle with severely reduced contraction.' onclick=';'> Severely dilated right ventricle with severely reduced contraction.</label>
+</div>
+<div class='category' id='group3'><label>3. Valves</label>
+<label class='phrase'><input type='radio' name='cat3' value='Satisfactory valvular function.' onclick=';'> Satisfactory valvular function.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Moderate mitral regurgitation.' onclick=';'> Moderate mitral regurgitation.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Severe mitral regurgitation.' onclick=';'> Severe mitral regurgitation.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Mitral valve SAM with LVOT flow acceleration, but no major obstruction.' onclick=';'> Mitral valve SAM with LVOT flow acceleration, but no major obstruction.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Moderate aortic regurgitation.' onclick=';'> Moderate aortic regurgitation.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Severe aortic regurgitation.' onclick=';'> Severe aortic regurgitation.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Moderate aortic stenosis.' onclick=';'> Moderate aortic stenosis.</label>
+<label class='phrase'><input type='radio' name='cat3' value='Severe aortic stenosis.' onclick=';'> Severe aortic stenosis.</label>
+</div>
+<div class='category' id='group4'><label>4. Pulmonary Pressure</label>
+<label class='phrase'><input type='radio' name='cat4' value='Normal estimated pulmonary pressure.' onclick=';'> Normal estimated pulmonary pressure.</label>
+<label class='phrase'><input type='radio' name='cat4' value='Unable to estimate pulmonary pressure due to incomplete TR Doppler envelope.' onclick=';'> Unable to estimate pulmonary pressure due to incomplete TR Doppler envelope.</label>
+<label class='phrase'><input type='radio' name='cat4' value='Normal right ventricular pressure, but an underestimate of pulmonary pressure (due to TR).' onclick=';'> Normal right ventricular pressure, but an underestimate of pulmonary pressure (due to TR).</label>
+<label class='phrase'><input type='radio' name='cat4' value='Normal right ventricular pressure, but an underestimate of pulmonary pressure (due to RVD).' onclick=';'> Normal right ventricular pressure, but an underestimate of pulmonary pressure (due to RVD).</label>
+<label class='phrase'><input type='radio' name='cat4' value='Elevated pulmonary pressure (estimated RVSP XXmmHg).' onclick=';'> Elevated pulmonary pressure (estimated RVSP XXmmHg).</label>
+<label class='phrase'><input type='radio' name='cat4' value='Elevated pulmonary pressure suggested by PR Doppler (PAEDP XXmmHg).' onclick=';'> Elevated pulmonary pressure suggested by PR Doppler (PAEDP XXmmHg).</label>
+<div id='extra4' style='margin-left:20px; margin-top:10px;'><i>Optional additions:</i>
+<label class='phrase'><input type='checkbox' name='extra4' value='No clear secondary signs of pulmonary hypertension.'> No clear secondary signs of pulmonary hypertension.</label>
+</div>
+</div>
+<div class='category' id='group5'><label>5. Pericardium</label>
+<label class='phrase'><input type='radio' name='cat5' value='No pericardial efffusion.' onclick=';'> No pericardial efffusion.</label>
+<label class='phrase'><input type='radio' name='cat5' value='Prominent epi/paracardial adipose tissue noted.' onclick=';'> Prominent epi/paracardial adipose tissue noted.</label>
+<label class='phrase'><input type='radio' name='cat5' value='Trivial pericardial effusion with no imaging evidence of tamponade physiology.' onclick=';'> Trivial pericardial effusion with no imaging evidence of tamponade physiology.</label>
+<label class='phrase'><input type='radio' name='cat5' value='Small pericardial effusion with early imaging evidence of tamponade physiology.' onclick=';'> Small pericardial effusion with early imaging evidence of tamponade physiology.</label>
+<label class='phrase'><input type='radio' name='cat5' value='Moderate pericardial effusion with imaging evidence of tamponade physiology.' onclick=';'> Moderate pericardial effusion with imaging evidence of tamponade physiology.</label>
+<label class='phrase'><input type='radio' name='cat5' value='Large pericardial effusion with imaging evidence of tamponade physiology.' onclick=';'> Large pericardial effusion with imaging evidence of tamponade physiology.</label>
+</div>
+
+  <button type="button" onclick=";">Generate Text</button>
+  <button type="button" onclick=";">Reset</button>
+  <textarea id="output" placeholder="Your selected phrases will appear here..."></textarea>
+  <div id="copiedMsg" style="margin-top:10px; color:lightgreen;"></div>
+</form>
+
+</body></html>
