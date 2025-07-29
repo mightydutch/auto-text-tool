@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Auto Text Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #eee;
+      padding: 20px;
+    }
+    .category { margin-bottom: 20px; }
+    label { font-weight: bold; display: block; margin-bottom: 5px; }
+    .phrase { margin-left: 20px; display: block; }
+    textarea {
+      width: 100%;
+      height: 150px;
+      margin-top: 20px;
+      padding: 10px;
+      font-size: 14px;
+      background: #222;
+      color: #eee;
+      border: 1px solid #555;
+    }
+    button {
+      margin-right: 10px;
+      padding: 10px 15px;
+      font-size: 16px;
+      background-color: #333;
+      color: #fff;
+      border: 1px solid #444;
+      cursor: pointer;
+    }
+    button:hover { background-color: #444; }
+  </style>
+</head>
+<body>
+  <h1>Auto Text Tool</h1>
+  <form id="form">
+    <div class="category">
+      <label>1. Left Ventricle</label>
+      <label class="phrase"><input type="radio" name="cat1" value="Normal LV size and EF"> Normal LV size and EF</label>
+      <label class="phrase"><input type="radio" name="cat1" value="Mild LV dilation with mildly reduced EF"> Mild LV dilation with mildly reduced EF</label>
+    </div>
+    <div class="category">
+      <label>2. Right Ventricle</label>
+      <label class="phrase"><input type="radio" name="cat2" value="Normal RV size and function"> Normal RV size and function</label>
+      <label class="phrase"><input type="radio" name="cat2" value="Moderately dilated RV with reduced function"> Moderately dilated RV with reduced function</label>
+    </div>
+    <div class="category">
+      <label>3. Valves</label>
+      <label class="phrase"><input type="radio" name="cat3" value="Normal valvular function"> Normal valvular function</label>
+      <label class="phrase"><input type="radio" name="cat3" value="Moderate mitral regurgitation"> Moderate mitral regurgitation</label>
+    </div>
+    <div class="category">
+      <label>4. Pulmonary Pressure</label>
+      <label class="phrase"><input type="radio" name="cat4" value="Normal estimated pulmonary pressure"> Normal estimated pulmonary pressure</label>
+      <label class="phrase"><input type="radio" name="cat4" value="Elevated RVSP"> Elevated RVSP</label>
+    </div>
+    <div class="category">
+      <label>5. Pericardium</label>
+      <label class="phrase"><input type="radio" name="cat5" value="No pericardial effusion"> No pericardial effusion</label>
+      <label class="phrase"><input type="radio" name="cat5" value="Moderate effusion with tamponade"> Moderate effusion with tamponade</label>
+    </div>
+    <button type="button" onclick=";">Generate Text</button>
+    <button type="button" onclick=";">Reset</button>
+    <textarea id="output" placeholder="Your selected text will appear here..."></textarea>
+    <div id="status" style="margin-top:10px; color: lightgreen;"></div>
+  </form>
+
+  
+</body>
+</html>
